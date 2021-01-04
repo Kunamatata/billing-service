@@ -1,0 +1,22 @@
+version: "3.8"
+services:
+  app1:
+    build: .
+    expose:
+      - 8080
+    container_name: "app1"
+  app2:
+    build: .
+    expose:
+      - 8080
+    container_name: "app2"
+  haproxy:
+    image: haproxy:alpine
+    container_name: haproxy
+    volumes:
+      - "./haproxy:/usr/local/etc/haproxy/haproxy.cfg:ro"
+    ports:
+      - "80:80"
+    links:
+      - app1
+      - app2
