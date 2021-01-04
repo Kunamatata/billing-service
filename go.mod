@@ -1,4 +1,4 @@
-module stripe-billing-service
+module github.com/Kunamatata/billing-service
 
 go 1.15
 

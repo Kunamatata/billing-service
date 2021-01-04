@@ -7,7 +7,7 @@ import (
 	"net/http"
 	"runtime/debug"
 
-	"stripe-billing-service/pkg/models"
+	"github.com/Kunamatata/billing-service/pkg/models"
 
 	"github.com/stripe/stripe-go"
 	"github.com/stripe/stripe-go/charge"
